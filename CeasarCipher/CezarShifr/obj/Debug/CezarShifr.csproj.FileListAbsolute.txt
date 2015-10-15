@@ -1,0 +1,20 @@
+C:\Users\Vadim\Documents\Visual Studio 2015\Projects\CeasarCipher-master\CezarShifr\bin\Debug\CezarShifr.exe.config
+C:\Users\Vadim\Documents\Visual Studio 2015\Projects\CeasarCipher-master\CezarShifr\bin\Debug\CezarShifr.exe
+C:\Users\Vadim\Documents\Visual Studio 2015\Projects\CeasarCipher-master\CezarShifr\bin\Debug\CezarShifr.pdb
+C:\Users\Vadim\Documents\Visual Studio 2015\Projects\CeasarCipher-master\CezarShifr\bin\Debug\nunit.framework.dll
+C:\Users\Vadim\Documents\Visual Studio 2015\Projects\CeasarCipher-master\CezarShifr\bin\Debug\nunit.framework.testcasestorage.dll
+C:\Users\Vadim\Documents\Visual Studio 2015\Projects\CeasarCipher-master\CezarShifr\bin\Debug\nunit.framework.xml
+C:\Users\Vadim\Documents\Visual Studio 2015\Projects\CeasarCipher-master\CezarShifr\bin\Debug\nunit.framework.testcasestorage.pdb
+C:\Users\Vadim\Documents\Visual Studio 2015\Projects\CeasarCipher-master\CezarShifr\obj\Debug\CezarShifr.exe
+C:\Users\Vadim\Documents\Visual Studio 2015\Projects\CeasarCipher-master\CezarShifr\obj\Debug\CezarShifr.pdb
+C:\Users\Vadim\Documents\Visual Studio 2015\Projects\CeasarCipher-master\CezarShifr\obj\Debug\CezarShifr.csprojResolveAssemblyReference.cache
+C:\Users\VadimB\Desktop\CeasarCipher\CeasarCipher\CezarShifr\bin\Debug\CezarShifr.exe.config
+C:\Users\VadimB\Desktop\CeasarCipher\CeasarCipher\CezarShifr\obj\Debug\CezarShifr.exe
+C:\Users\VadimB\Desktop\CeasarCipher\CeasarCipher\CezarShifr\obj\Debug\CezarShifr.pdb
+C:\Users\VadimB\Desktop\CeasarCipher\CeasarCipher\CezarShifr\bin\Debug\CezarShifr.exe
+C:\Users\VadimB\Desktop\CeasarCipher\CeasarCipher\CezarShifr\bin\Debug\CezarShifr.pdb
+C:\Users\VadimB\Desktop\CeasarCipher\CeasarCipher\CezarShifr\bin\Debug\nunit.framework.dll
+C:\Users\VadimB\Desktop\CeasarCipher\CeasarCipher\CezarShifr\bin\Debug\nunit.framework.testcasestorage.dll
+C:\Users\VadimB\Desktop\CeasarCipher\CeasarCipher\CezarShifr\bin\Debug\nunit.framework.xml
+C:\Users\VadimB\Desktop\CeasarCipher\CeasarCipher\CezarShifr\bin\Debug\nunit.framework.testcasestorage.pdb
+C:\Users\VadimB\Desktop\CeasarCipher\CeasarCipher\CezarShifr\obj\Debug\CezarShifr.csprojResolveAssemblyReference.cache
