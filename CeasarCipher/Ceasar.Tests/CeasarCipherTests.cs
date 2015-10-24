@@ -153,6 +153,28 @@ namespace Ceasar.Tests
 
             Assert.AreEqual(word, cipher.Decrypt(encrypted));
         }
+        
+        [Test]
+        public void Encrypt_RushinSimvols()
+        {
+            var cipher = new CeasarCipher(offset: 1);
+            var word = "абвг";
+
+            var encrypted = cipher.Encrypt(word);
+
+            Assert.AreEqual("бвгд", encrypted);
+        }
+
+        [Test]
+        public void EncryptDecrypt_RushinAndEnglish()
+        {
+            var cipher = new CeasarCipher(offset: 1);
+            var word = "аб ab АБ AB";
+
+            var encrypted = cipher.Encrypt(word);
+
+            Assert.AreEqual(word, cipher.Decrypt(encrypted));
+        }
     }
 
 
