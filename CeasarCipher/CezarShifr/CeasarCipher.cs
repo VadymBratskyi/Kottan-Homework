@@ -24,7 +24,19 @@ namespace CezarShifr
             'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
             'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
         };
+            
+        private char[] ruLe =
+        {
+            'а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
+            'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'
+        };
 
+        private char[] RUle =
+        {
+            'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
+            'С', 'Т', 'У','Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'
+        };
+        
         private char[] simv =
         {
             '~', '!'
@@ -35,7 +47,7 @@ namespace CezarShifr
             this.offset = offset;
         }
 
-        public string Encrypt(string word)
+           public string Encrypt(string word)
         {
             if (word == null)
             {
@@ -64,11 +76,11 @@ namespace CezarShifr
                         }
                         else if (cod > 64 && cod < 123)
                         {
-                            for (int k = 0; k < enLe.Length; k++)
+                            for (int j = 0; j < enLe.Length; j++)
                             {
-                                if (word[i] == ENle[k])
+                                if (word[i] == ENle[j])
                                 {
-                                    int temp = k + offset;
+                                    int temp = j + offset;
                                     while (temp >= ENle.Length)
                                     {
                                         temp -= ENle.Length;
@@ -77,13 +89,43 @@ namespace CezarShifr
                                 }
                             }
                         }
+                        else if (cod > 1071 && cod < 1104)
+                        {
+                            for (int j = 0; j < ruLe.Length; j++)
+                            {
+                                if (word[i] == ruLe[j])
+                                {
+                                    int temp = j + offset;
+                                    while (temp >= ruLe.Length)
+                                    {
+                                        temp -= ruLe.Length;
+                                    }
+                                    shifr += ruLe[temp];
+                                }
+                            }
+                        }
+                        else if (cod > 1039 && cod < 1070)
+                        {
+                            for (int j = 0; j < RUle.Length; j++)
+                            {
+                                if (word[i]==RUle[j])
+                                {
+                                    int temp = j + offset;
+                                    while (temp >= RUle.Length)
+                                    {
+                                        temp -= RUle.Length;
+                                    }
+                                    shifr += RUle[temp];
+                                }
+                            }
+                        }
                         else if (cod == 33 || cod == 126)
                         {
-                            for (int h = 0; h < simv.Length; h++)
+                            for (int j = 0; j < simv.Length; j++)
                             {
-                                if (word[i] == simv[h])
+                                if (word[i] == simv[j])
                                 {
-                                    int temp = h + 1;
+                                    int temp = j + 1;
                                     while (temp >= simv.Length)
                                     {
                                         temp -= simv.Length;
@@ -91,7 +133,8 @@ namespace CezarShifr
                                     shifr += simv[temp];
                                 }
                             }
-                        }else if (cod == 32)
+                        }
+                        else if (cod == 32)
                         {
                             shifr += " ";
                         }
@@ -103,7 +146,6 @@ namespace CezarShifr
                 return shifr;
             }
         }
-
 
 
         public string Decrypt(string word)
@@ -120,11 +162,11 @@ namespace CezarShifr
                         var cod = Convert.ToInt32(word[i]);
                         if (cod > 96 && cod < 123)
                         {
-                            for (int k = 0; k < enLe.Length; k++)
+                            for (int j = 0; j < enLe.Length; j++)
                             {
-                                if (word[i] == enLe[k])
+                                if (word[i] == enLe[j])
                                 {
-                                    int temp = k - offset;
+                                    int temp = j - offset;
                                     while (temp >= enLe.Length)
                                     {
                                         temp += enLe.Length;
@@ -139,11 +181,11 @@ namespace CezarShifr
                         }
                         else if (cod > 64 && cod < 123)
                         {
-                            for (int k = 0; k < enLe.Length; k++)
+                            for (int j = 0; j < enLe.Length; j++)
                             {
-                                if (word[i] == ENle[k])
+                                if (word[i] == ENle[j])
                                 {
-                                    int temp = k - offset;
+                                    int temp = j - offset;
                                     while (temp >= ENle.Length)
                                     {
                                         temp += ENle.Length;
@@ -156,13 +198,47 @@ namespace CezarShifr
                                 }
                             }
                         }
-                        else if (cod == 33 || cod == 126)
+                    else if (cod > 1071 && cod < 1104)
+                    {
+                        for (int j = 0; j < ruLe.Length; j++)
                         {
-                            for (int h = 0; h < simv.Length; h++)
+                            if (word[i] == ruLe[j])
                             {
-                                if (word[i] == simv[h])
+                                int temp = j - offset;
+                                while (temp >= ruLe.Length)
                                 {
-                                    int temp = h - 1;
+                                    temp += ruLe.Length;
+                                }
+                                while (temp < 0)
+                                {
+                                    temp += ruLe.Length;
+                                }
+                                unshifr += ruLe[temp];
+                            }
+                        }
+                    }
+                    else if (cod > 1039 && cod < 1070)
+                    {
+                        for (int j = 0; j < RUle.Length; j++)
+                        {
+                            if (word[i] == RUle[j])
+                            {
+                                int temp = j - offset;
+                                while (temp >= RUle.Length)
+                                {
+                                    temp += RUle.Length;
+                                }
+                                unshifr += RUle[temp];
+                            }
+                        }
+                    }
+                    else if (cod == 33 || cod == 126)
+                        {
+                            for (int j = 0; j < simv.Length; j++)
+                            {
+                                if (word[i] == simv[j])
+                                {
+                                    int temp = j - 1;
                                     while (temp >= simv.Length)
                                     {
                                         temp += simv.Length;
